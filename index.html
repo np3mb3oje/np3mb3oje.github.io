@@ -1,0 +1,1170 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>天天日日夜夜久久-长篇连载阅读与追更指南</title>
+<meta name="description" content="天天日日夜夜久久是面向长篇连载读者的追更与阅读指引站，梳理连载平台排期、章节更新节奏、阅读进度管理与读者评论方法，帮助读者在长线故事里找到稳定的阅读节奏。">
+<meta name="keywords" content="天天日日夜夜久久">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b2a4a'/%3E%3Cpath d='M14 44V22c6-4 11-4 18 0v22c-7-4-12-4-18 0z' fill='%23f2b544'/%3E%3Cpath d='M50 44V22c-6-4-11-4-18 0v22c7-4 12-4 18 0z' fill='%23e8e2d4'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1b2437;
+  --ink-soft:#3c4a63;
+  --muted:#6c7789;
+  --paper:#fbf9f4;
+  --paper-2:#f3efe5;
+  --line:#ddd6c6;
+  --brand:#1b2a4a;
+  --brand-2:#2c4270;
+  --accent:#c98a1b;
+  --accent-soft:#f6e2b8;
+  --ok:#2f6b52;
+  --warn:#9a4b2f;
+  --radius:14px;
+  --radius-sm:8px;
+  --shadow:0 2px 10px rgba(27,36,55,.08);
+  --shadow-lg:0 10px 30px rgba(27,36,55,.12);
+  --gap:18px;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  --serif:"Songti SC","Noto Serif SC","SimSun",serif;
+  --stick:112px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--stick)}
+body{
+  margin:0;font-family:var(--font);color:var(--ink);background:var(--paper);
+  line-height:1.75;font-size:16px;-webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{line-height:1.35;margin:0 0 .5em}
+p{margin:0 0 1em}
+a{color:var(--brand-2);text-decoration:none}
+a:hover{text-decoration:underline}
+ul,ol{margin:0 0 1em;padding-left:1.25em}
+li{margin:.3em 0}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+
+/* 吸顶区 */
+.sticky-zone{position:sticky;top:0;z-index:60}
+.announce{
+  background:var(--brand);color:#f2eee2;font-size:13.5px;
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.announce .wrap{display:flex;gap:12px;align-items:center;padding:7px 0;flex-wrap:wrap}
+.announce b{color:var(--accent-soft);font-weight:600}
+.announce .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none}
+.announce a{color:#fff;border-bottom:1px dashed rgba(255,255,255,.45)}
+.site-head{background:rgba(251,249,244,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);box-shadow:var(--shadow)}
+.head-inner{display:flex;align-items:center;gap:20px;padding:12px 0}
+.brand{display:flex;align-items:center;gap:11px;flex:none}
+.brand-mark{width:42px;height:42px;flex:none}
+.brand-text{font-size:19px;font-weight:700;color:var(--brand);letter-spacing:.5px;line-height:1.1}
+.brand-text small{display:block;font-size:11px;font-weight:400;color:var(--muted);letter-spacing:2px;margin-top:2px}
+.nav-main{display:flex;gap:4px;flex-wrap:wrap;flex:1}
+.nav-main a{
+  padding:7px 11px;border-radius:999px;font-size:14.5px;color:var(--ink-soft);
+  white-space:nowrap;
+}
+.nav-main a:hover{background:var(--paper-2);color:var(--brand);text-decoration:none}
+.nav-main a.active{background:var(--brand);color:#fff}
+.head-tools{display:flex;align-items:center;gap:10px;flex:none}
+.search-box{display:flex;align-items:center;background:#fff;border:1px solid var(--line);border-radius:999px;padding:3px 4px 3px 13px}
+.search-box input{border:0;background:transparent;font:inherit;font-size:14px;width:150px;padding:5px 0;color:var(--ink)}
+.search-box input:focus{outline:none}
+.search-box button{
+  border:0;background:var(--brand);color:#fff;border-radius:999px;
+  width:32px;height:32px;cursor:pointer;display:grid;place-items:center;font-size:14px;
+}
+.search-result{
+  position:absolute;right:16px;top:100%;margin-top:6px;background:#fff;border:1px solid var(--line);
+  border-radius:var(--radius-sm);box-shadow:var(--shadow-lg);width:min(320px,calc(100vw - 32px));
+  padding:10px;font-size:13.5px;display:none;z-index:70;max-height:60vh;overflow:auto;
+}
+.search-result.show{display:block}
+.search-result ul{list-style:none;padding:0;margin:0}
+.search-result li{padding:6px 8px;border-radius:6px}
+.search-result li:hover{background:var(--paper-2)}
+.search-result .empty{color:var(--muted);padding:6px 8px}
+.btn-menu{display:none;border:1px solid var(--line);background:#fff;border-radius:var(--radius-sm);width:40px;height:40px;cursor:pointer;padding:0;place-items:center}
+.btn-menu span{display:block;width:18px;height:2px;background:var(--brand);margin:3px auto;transition:transform .2s}
+.btn-menu[aria-expanded="true"] span:nth-child(1){transform:translateY(5px) rotate(45deg)}
+.btn-menu[aria-expanded="true"] span:nth-child(2){opacity:0}
+.btn-menu[aria-expanded="true"] span:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
+
+/* 首屏 */
+.hero{
+  background:
+    radial-gradient(circle at 88% 18%,rgba(201,138,27,.16),transparent 42%),
+    linear-gradient(160deg,#1b2a4a 0%,#22355c 55%,#1a2744 100%);
+  color:#f4f0e6;padding:52px 0 46px;position:relative;overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;inset:auto -60px -80px -60px;height:180px;
+  background:radial-gradient(ellipse at center,rgba(201,138,27,.18),transparent 70%);
+  pointer-events:none;
+}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center;position:relative;z-index:1}
+.tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.tag-row span{font-size:12.5px;border:1px solid rgba(242,238,226,.35);padding:3px 10px;border-radius:999px;color:#f0e8d4}
+.hero h1{font-size:clamp(28px,4vw,44px);letter-spacing:1px;margin-bottom:14px;font-weight:800}
+.hero .lede{font-size:16.5px;color:#d6d0bf;max-width:34em;margin-bottom:22px}
+.hero .lede b{color:#fff;font-weight:600}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:999px;
+  font-size:15px;font-weight:600;border:1px solid transparent;transition:transform .15s ease,background .15s;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-primary{background:var(--accent);color:#221a08}
+.btn-primary:hover{background:#dc9a26}
+.btn-ghost{border-color:rgba(242,238,226,.45);color:#f4f0e6}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.hero-stats{display:flex;gap:26px;margin-top:26px;flex-wrap:wrap}
+.hero-stats div{border-left:2px solid var(--accent);padding-left:12px}
+.hero-stats strong{display:block;font-size:22px;color:#fff;line-height:1.2}
+.hero-stats small{font-size:12.5px;color:#bfb8a6}
+.hero-art{position:relative;min-height:250px}
+.hero-art svg{width:100%;height:auto;filter:drop-shadow(0 12px 24px rgba(0,0,0,.25))}
+.art-note{
+  position:absolute;bottom:0;left:0;font-size:12px;color:#bfb8a6;
+  background:rgba(15,22,38,.55);border:1px solid rgba(242,238,226,.16);
+  padding:4px 10px;border-radius:6px;
+}
+
+/* 主内容布局 */
+main{padding:38px 0 20px}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:34px;align-items:start}
+.side{position:sticky;top:var(--stick);display:flex;flex-direction:column;gap:18px}
+section.block{margin-bottom:42px;scroll-margin-top:var(--stick)}
+.sec-head{display:flex;align-items:baseline;gap:14px;border-bottom:2px solid var(--brand);padding-bottom:8px;margin-bottom:18px}
+.sec-head h2{font-size:22px;margin:0;color:var(--brand);letter-spacing:.5px}
+.sec-head .kicker{font-size:12.5px;color:var(--muted);letter-spacing:2px;text-transform:uppercase}
+.sec-head .more{margin-left:auto;font-size:13.5px}
+
+/* 概览 */
+.overview{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
+.ov-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+.ov-card h3{font-size:16px;color:var(--brand);margin-bottom:6px}
+.ov-card p{font-size:14px;color:var(--ink-soft);margin:0}
+.ov-card .num{font-size:13px;color:var(--accent);font-weight:700;letter-spacing:1px}
+
+/* 精选 */
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
+.fcard{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow);transition:transform .18s ease,box-shadow .18s ease}
+.fcard:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.fcard img{width:100%;height:150px;object-fit:cover}
+.fcard-body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.fcard-body h3{font-size:16px;margin:0}
+.fcard-body p{font-size:13.5px;color:var(--ink-soft);margin:0}
+.meta{font-size:12px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:6px}
+.chip{display:inline-block;font-size:12px;background:var(--paper-2);color:var(--brand-2);border-radius:999px;padding:2px 9px}
+
+/* 更新列表 */
+.updates{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.up-row{display:grid;grid-template-columns:86px 1fr auto;gap:14px;align-items:center;padding:12px 16px;border-bottom:1px dashed var(--line)}
+.up-row:last-child{border-bottom:0}
+.up-row time{font-size:13px;color:var(--warn);font-weight:600;font-variant-numeric:tabular-nums}
+.up-row .t{font-size:14.5px}
+.up-row .t small{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
+.up-row .badge{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:2px 10px;color:var(--ink-soft);white-space:nowrap}
+
+/* 分类索引 */
+.cat-index{display:flex;flex-wrap:wrap;gap:10px}
+.cat-index a{
+  display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);
+  border-radius:999px;padding:8px 15px;font-size:14px;color:var(--ink-soft);
+}
+.cat-index a:hover{background:var(--accent-soft);border-color:var(--accent);color:var(--ink);text-decoration:none}
+.cat-index a b{font-size:11.5px;color:var(--muted);font-weight:500}
+
+/* 深度解析 */
+.deep{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 28px;box-shadow:var(--shadow)}
+.deep h2{font-size:24px;color:var(--brand)}
+.deep .byline{font-size:13px;color:var(--muted);border-left:3px solid var(--accent);padding-left:10px;margin-bottom:20px}
+.deep h3{font-size:17.5px;color:var(--brand-2);margin-top:26px;border-bottom:1px dashed var(--line);padding-bottom:6px}
+.deep p{font-size:15.5px;color:var(--ink-soft)}
+.deep strong{color:var(--ink)}
+.deep blockquote{
+  margin:18px 0;background:var(--paper-2);border-left:4px solid var(--brand-2);
+  padding:14px 18px;border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-size:15px;color:var(--ink);
+  font-family:var(--serif);
+}
+.deep blockquote footer{font-size:12.5px;color:var(--muted);margin-top:6px;font-family:var(--font)}
+.verify-table{width:100%;border-collapse:collapse;font-size:14px;margin:14px 0;background:#fff}
+.verify-table caption{font-size:12.5px;color:var(--muted);text-align:left;padding-bottom:6px}
+.verify-table th,.verify-table td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.verify-table th{background:var(--paper-2);font-weight:600;color:var(--brand);font-size:13px}
+.verify-table td{color:var(--ink-soft)}
+
+/* 体验指南 步骤 */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:step}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px 16px;position:relative}
+.step::before{
+  counter-increment:step;content:counter(step);
+  position:absolute;top:-12px;left:16px;width:26px;height:26px;border-radius:50%;
+  background:var(--brand);color:#fff;font-size:13px;display:grid;place-items:center;font-weight:700;
+}
+.step h3{font-size:15px;margin:6px 0 6px;color:var(--brand)}
+.step p{font-size:13.5px;margin:0;color:var(--ink-soft)}
+
+/* 对照面板 */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.compare>div{padding:20px 22px}
+.compare .left{background:#fff}
+.compare .right{background:var(--paper-2);border-left:1px solid var(--line)}
+.compare h3{font-size:16px;margin-bottom:10px}
+.compare ul{font-size:14px;color:var(--ink-soft);margin:0}
+.compare .tagline{font-size:12px;letter-spacing:1px;color:var(--muted);display:block;margin-bottom:6px}
+
+/* FAQ */
+.faq{display:flex;flex-direction:column;gap:10px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:0 18px}
+.faq details[open]{border-color:var(--accent);box-shadow:var(--shadow)}
+.faq summary{
+  cursor:pointer;padding:14px 0;font-size:15.5px;font-weight:600;color:var(--brand);
+  list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:20px;color:var(--accent);line-height:1;transition:transform .2s}
+.faq details[open] summary::after{content:"–"}
+.faq .ans{padding:0 0 16px;font-size:14.5px;color:var(--ink-soft);border-top:1px dashed var(--line);margin-top:0;padding-top:12px}
+
+/* 评论 */
+.comments{display:flex;flex-direction:column;gap:12px}
+.comment{background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:14px 16px}
+.comment header{display:flex;gap:10px;align-items:center;font-size:13px;color:var(--muted);margin-bottom:6px;flex-wrap:wrap}
+.comment .avatar{width:26px;height:26px;border-radius:50%;background:var(--brand-2);color:#fff;display:grid;place-items:center;font-size:12px;flex:none}
+.comment .name{font-weight:600;color:var(--ink)}
+.comment p{font-size:14.5px;margin:0 0 6px;color:var(--ink-soft)}
+.comment .ref{font-size:12.5px;background:var(--paper-2);border-radius:6px;padding:2px 8px;display:inline-block;color:var(--brand-2)}
+.comment.critic p{color:var(--ink)}
+
+/* 资讯 */
+.news-list{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.news{display:flex;gap:14px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px;align-items:flex-start}
+.news img{width:88px;height:88px;object-fit:cover;border-radius:var(--radius-sm);flex:none}
+.news h3{font-size:14.5px;margin:0 0 5px}
+.news p{font-size:13px;color:var(--ink-soft);margin:0}
+.news time{font-size:12px;color:var(--muted);display:block;margin-top:5px}
+
+/* 相关推荐 标签 */
+.rec-tags{display:flex;flex-wrap:wrap;gap:9px}
+.rec-tags a{background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:8px 14px;font-size:13.5px;color:var(--ink-soft)}
+.rec-tags a:hover{border-color:var(--brand-2);color:var(--brand);background:var(--paper-2);text-decoration:none}
+
+/* 榜单 */
+.rank{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.rank ol{list-style:none;margin:0;padding:0;counter-reset:rk}
+.rank li{
+  counter-increment:rk;display:grid;grid-template-columns:36px 1fr auto;gap:12px;align-items:center;
+  padding:12px 16px;border-bottom:1px dashed var(--line);font-size:14.5px;
+}
+.rank li:last-child{border-bottom:0}
+.rank li::before{
+  content:counter(rk);font-weight:800;color:var(--muted);font-family:var(--serif);font-size:17px;
+}
+.rank li:nth-child(-n+3)::before{color:var(--accent)}
+.rank .num{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+
+/* 时间线 */
+.timeline{position:relative;padding-left:22px;border-left:2px solid var(--line);margin-left:6px;display:flex;flex-direction:column;gap:16px}
+.tl{position:relative}
+.tl::before{content:"";position:absolute;left:-29px;top:5px;width:12px;height:12px;border-radius:50%;background:var(--accent);border:2px solid var(--paper)}
+.tl time{font-size:12.5px;color:var(--warn);font-weight:600}
+.tl h3{font-size:15px;margin:2px 0 4px}
+.tl p{font-size:13.5px;color:var(--ink-soft);margin:0}
+
+/* 侧栏组件 */
+.side-box{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow)}
+.side-box h2,.side-box h3{font-size:15px;margin:0 0 10px;color:var(--brand);border-left:3px solid var(--accent);padding-left:8px}
+.side-nav{display:flex;flex-direction:column;gap:2px}
+.side-nav a{font-size:13.5px;color:var(--ink-soft);padding:6px 10px;border-radius:6px;border-left:2px solid transparent}
+.side-nav a:hover{background:var(--paper-2);text-decoration:none}
+.side-nav a.active{background:var(--paper-2);border-left-color:var(--accent);color:var(--brand);font-weight:600}
+.side-box ul{list-style:none;padding:0;margin:0;font-size:13.5px}
+.side-box li{padding:6px 0;border-bottom:1px dashed var(--line)}
+.side-box li:last-child{border-bottom:0}
+.side-box li a{color:var(--ink-soft)}
+.side-box li small{display:block;color:var(--muted);font-size:12px}
+.side-note{font-size:12.5px;color:var(--muted);background:var(--paper-2);border-radius:var(--radius-sm);padding:10px 12px}
+
+/* 页尾 */
+footer.site-foot{background:var(--brand);color:#d6d0bf;margin-top:50px;padding:44px 0 26px}
+.foot-grid{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:30px}
+.foot-brand .brand-text{color:#fff}
+.foot-brand .brand-text small{color:#9aa4b8}
+.foot-brand p{font-size:13.5px;margin:12px 0 0;color:#b3b9c7;max-width:26em}
+.foot-col h3{font-size:14px;color:#fff;margin-bottom:10px;letter-spacing:1px}
+.foot-col ul{list-style:none;padding:0;margin:0;font-size:13.5px}
+.foot-col li{margin:.4em 0}
+.foot-col a{color:#b9c0cf}
+.foot-col a:hover{color:#fff}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.14);margin-top:30px;padding-top:18px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px;color:#9aa4b8}
+.foot-bottom p{margin:0}
+.sample-note{font-size:12px;color:#8e97a8;margin-top:8px}
+
+/* 回到顶部 */
+#toTop{
+  position:fixed;right:20px;bottom:24px;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:#fff;color:var(--brand);font-size:18px;
+  display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow-lg);
+  opacity:0;visibility:hidden;transform:translateY(10px);transition:.25s;z-index:55;
+}
+#toTop.show{opacity:1;visibility:visible;transform:none}
+
+/* 响应式 */
+@media (max-width:980px){
+  .layout{grid-template-columns:1fr}
+  .side{position:static;order:2}
+  main .layout>.content{order:1}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-art{max-width:420px;margin-inline:auto}
+  .overview{grid-template-columns:repeat(2,1fr)}
+  .feature-grid{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .news-list{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  :root{--stick:104px}
+  .nav-main{
+    display:none;position:absolute;left:0;right:0;top:100%;background:#fff;
+    border-bottom:1px solid var(--line);box-shadow:var(--shadow-lg);padding:10px 16px 16px;
+    flex-direction:column;gap:2px;max-height:70vh;overflow:auto;
+  }
+  .nav-main.open{display:flex}
+  .nav-main a{padding:10px 12px;border-radius:var(--radius-sm)}
+  .btn-menu{display:grid}
+  .head-inner{position:relative;flex-wrap:wrap;gap:10px}
+  .head-tools{margin-left:auto}
+  .search-box input{width:120px}
+  .overview,.feature-grid,.steps{grid-template-columns:1fr}
+  .compare{grid-template-columns:1fr}
+  .compare .right{border-left:0;border-top:1px solid var(--line)}
+  .up-row{grid-template-columns:1fr auto;gap:6px}
+  .up-row time{grid-column:1 / -1}
+  .deep{padding:20px 18px}
+  .foot-grid{grid-template-columns:1fr}
+  .hero{padding:36px 0}
+  #toTop{right:14px;bottom:16px;width:40px;height:40px}
+}
+@media (max-width:400px){
+  .brand-text{font-size:17px}
+  .search-box input{width:92px}
+  .hero-stats{gap:16px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms !important;transition-duration:.001ms !important}
+  .btn:hover,.fcard:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-zone">
+  <div class="announce">
+    <div class="wrap">
+      <span class="dot" aria-hidden="true"></span>
+      <b>天天日日夜夜久久 · 更新公告</b>
+      <span>11 月 6 日：连载排期表新增《长夜千灯》第 412–418 章时间轴</span>
+      <a href="/#updates">查看本周更新</a>
+    </div>
+  </div>
+  <header class="site-head">
+    <div class="wrap head-inner">
+      <a class="brand" href="/#top" aria-label="天天日日夜夜久久 首页">
+        <svg class="brand-mark" viewBox="0 0 64 64" role="img" aria-label="双页书册标志">
+          <rect width="64" height="64" rx="14" fill="#1b2a4a"/>
+          <path d="M14 44V22c6-4 11-4 18 0v22c-7-4-12-4-18 0z" fill="#f2b544"/>
+          <path d="M50 44V22c-6-4-11-4-18 0v22c7-4 12-4 18 0z" fill="#e8e2d4"/>
+          <line x1="32" y1="22" x2="32" y2="46" stroke="#1b2a4a" stroke-width="2"/>
+          <circle cx="47" cy="18" r="4" fill="#c98a1b"/>
+        </svg>
+        <span class="brand-text">天天日日夜夜久久<small>长篇连载阅读指南</small></span>
+      </a>
+      <button class="btn-menu" id="menuBtn" aria-expanded="false" aria-controls="mainNav" aria-label="展开主题导航">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-main" id="mainNav" aria-label="主题导航">
+        <a href="/#overview">连载概览</a>
+        <a href="/#featured">精选追更</a>
+        <a href="/#updates">更新排期</a>
+        <a href="/#channels">题材频道</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">阅读指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#comments">读者评论</a>
+      </nav>
+      <div class="head-tools">
+        <form class="search-box" id="searchForm" role="search" aria-label="站内本地查找">
+          <input type="search" id="searchInput" placeholder="搜书名 / 作者 / 规则" aria-label="输入关键词查找本站条目">
+          <button type="submit" aria-label="查找">查</button>
+        </form>
+        <div class="search-result" id="searchResult" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </header>
+</div>
+
+<div id="top"></div>
+
+<section class="hero" aria-labelledby="heroTitle">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="tag-row">
+        <span>连载排期追踪</span>
+        <span>章节节奏管理</span>
+        <span>评论与口碑核对</span>
+      </div>
+      <h1 id="heroTitle">天天日日夜夜久久</h1>
+      <p class="lede">把一部长篇追到完结，靠的不是熬夜刷新，而是<b>排期表、章节计数和断更预警</b>三件事。这里按平台与作品整理更新节奏，标注每部书的实际断更天数、章节误差与读者口碑变化。</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="/#updates">看本周更新排期</a>
+        <a class="btn btn-ghost" href="/#deep">读深度解析</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>186</strong><small>在追长篇条目</small></div>
+        <div><strong>11-06</strong><small>排期表最近核对</small></div>
+        <div><strong>4</strong><small>已标注断更预警</small></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <svg viewBox="0 0 420 280" role="img" aria-label="书页与日历叠加的原创图形，示意连载章节与更新日期">
+        <defs>
+          <linearGradient id="pg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#f4f0e6"/><stop offset="1" stop-color="#d9d0bb"/>
+          </linearGradient>
+        </defs>
+        <rect x="20" y="40" width="250" height="200" rx="10" fill="url(#pg)" transform="rotate(-4 145 140)"/>
+        <rect x="150" y="30" width="250" height="200" rx="10" fill="#fbf9f4" opacity=".92"/>
+        <line x1="175" y1="64" x2="370" y2="64" stroke="#c9c0ab" stroke-width="6" stroke-linecap="round"/>
+        <line x1="175" y1="90" x2="345" y2="90" stroke="#ddd6c6" stroke-width="6" stroke-linecap="round"/>
+        <line x1="175" y1="116" x2="360" y2="116" stroke="#ddd6c6" stroke-width="6" stroke-linecap="round"/>
+        <line x1="175" y1="142" x2="310" y2="142" stroke="#ddd6c6" stroke-width="6" stroke-linecap="round"/>
+        <line x1="175" y1="168" x2="330" y2="168" stroke="#ddd6c6" stroke-width="6" stroke-linecap="round"/>
+        <rect x="175" y="192" width="70" height="24" rx="12" fill="#c98a1b"/>
+        <text x="192" y="209" font-size="13" fill="#221a08" font-family="sans-serif">412 章</text>
+        <g transform="translate(46,60)">
+          <rect x="0" y="0" width="120" height="120" rx="10" fill="#22355c"/>
+          <rect x="10" y="12" width="100" height="22" rx="4" fill="#c98a1b"/>
+          <g fill="#8fa0c4">
+            <rect x="12" y="46" width="16" height="14" rx="2"/><rect x="36" y="46" width="16" height="14" rx="2"/>
+            <rect x="60" y="46" width="16" height="14" rx="2"/><rect x="84" y="46" width="16" height="14" rx="2"/>
+            <rect x="12" y="68" width="16" height="14" rx="2"/><rect x="36" y="68" width="16" height="14" rx="2"/>
+            <rect x="60" y="68" width="16" height="14" rx="2"/><rect x="84" y="68" width="16" height="14" rx="2"/>
+          </g>
+          <rect x="60" y="68" width="16" height="14" rx="2" fill="#f2b544"/>
+          <rect x="12" y="92" width="88" height="10" rx="5" fill="#5d709b"/>
+        </g>
+        <circle cx="360" cy="240" r="18" fill="none" stroke="#c98a1b" stroke-width="3"/>
+        <path d="M352 240l6 6 11-13" stroke="#c98a1b" stroke-width="3" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span class="art-note">章节与排期示意 · 非真实截图</span>
+    </div>
+  </div>
+</section>
+
+<main id="main">
+  <div class="wrap layout">
+
+    <div class="content">
+
+      <!-- 连载概览 -->
+      <section class="block" id="overview" aria-labelledby="ovTitle">
+        <div class="sec-head">
+          <h2 id="ovTitle">连载概览：今天的更新节奏</h2>
+          <span class="kicker">OVERVIEW</span>
+          <a class="more" href="/#updates">全部排期</a>
+        </div>
+        <div class="overview">
+          <article class="ov-card">
+            <span class="num">11 / 06</span>
+            <h3>三平台统一核对日</h3>
+            <p>星洲书阁、云栖阅读、长灯文馆三个平台的连载章节号在这一天集中比对，发现《北岭旧档》在两站相差 2 章。</p>
+          </article>
+          <article class="ov-card">
+            <span class="num">7 天</span>
+            <h3>本周断更观察窗</h3>
+            <p>过去 7 天共有 4 部书未按排期更新，其中 3 部作者在评论区说明了原因，1 部仍无回应。</p>
+          </article>
+          <article class="ov-card">
+            <span class="num">418</span>
+            <h3>《长夜千灯》当前章节</h3>
+            <p>作者沈砚舟在 11 月 5 日更新至第 418 章，单章约 3200 字，比上月平均字数少 400 字。</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 精选追更 -->
+      <section class="block" id="featured" aria-labelledby="ftTitle">
+        <div class="sec-head">
+          <h2 id="ftTitle">精选追更：本周值得排进书单的六部</h2>
+          <span class="kicker">PICKED</span>
+          <a class="more" href="/#channels">按题材筛选</a>
+        </div>
+        <div class="feature-grid">
+          <article class="fcard">
+            <img src="https://picsum.photos/seed/changyeqiandeng/400/260" width="400" height="260" loading="lazy" alt="长夜千灯：夜色中的千盏灯笼沿石阶排开">
+            <div class="fcard-body">
+              <h3>长夜千灯 · 追更至 418 章</h3>
+              <p>灯匠世家的旧约在第十九卷摊开。作者沈砚舟稳定日更，周三拆成双更。</p>
+              <div class="meta"><span class="chip">云栖阅读</span><span>11-05 更新</span></div>
+            </div>
+          </article>
+          <article class="fcard">
+            <img src="https://picsum.photos/seed/beilingjiudang/400/260" width="400" height="260" loading="lazy" alt="北岭旧档：雪地木屋里堆叠的档案盒">
+            <div class="fcard-body">
+              <h3>北岭旧档 · 第 233 章勘误</h3>
+              <p>第 233 章时间线写错年份，作者 11 月 3 日发布修订版，两站章节号尚未同步。</p>
+              <div class="meta"><span class="chip">星洲书阁</span><span>11-03 修订</span></div>
+            </div>
+          </article>
+          <article class="fcard">
+            <img src="https://picsum.photos/seed/yunyinqishi/400/260" width="400" height="260" loading="lazy" alt="云隐棋事：木质棋盘与未落子的棋罐">
+            <div class="fcard-body">
+              <h3>云隐棋事 · 双更修复第 156 章</h3>
+              <p>作者叶栖迟把第 156 章拆为上下两节，补足 2800 字，读者评分从 8.2 回到 8.6。</p>
+              <div class="meta"><span class="chip">长灯文馆</span><span>11-04 修复</span></div>
+            </div>
+          </article>
+          <article class="fcard">
+            <img src="https://picsum.photos/seed/shushanxingji/400/260" width="400" height="260" loading="lazy" alt="蜀山行记：雾中的山道与远行背囊">
+            <div class="fcard-body">
+              <h3>蜀山行记 · 卷外篇停更 5 天</h3>
+              <p>作者顾之野在 10 月 30 日宣布调整，卷外篇暂停，正篇恢复日更。</p>
+              <div class="meta"><span class="chip">星洲书阁</span><span>10-30 公告</span></div>
+            </div>
+          </article>
+          <article class="fcard">
+            <img src="https://picsum.photos/seed/jiuzhouyanhuo/400/260" width="400" height="260" loading="lazy" alt="九州烟火志：夜市摊位上悬挂的纸灯">
+            <div class="fcard-body">
+              <h3>九州烟火志 · 第 302 章评论区争议</h3>
+              <p>描摹市井食物的段落被读者指出与旧作重复，作者 11 月 2 日回应称是刻意复调。</p>
+              <div class="meta"><span class="chip">云栖阅读</span><span>11-02 回应</span></div>
+            </div>
+          </article>
+          <article class="fcard">
+            <img src="https://picsum.photos/seed/guyandengyu/400/260" width="400" height="260" loading="lazy" alt="古砚灯语：书房里砚台与油灯的静物">
+            <div class="fcard-body">
+              <h3>古砚灯语 · 章节字数连续下滑</h3>
+              <p>最近 6 章从 3400 字降到 2400 字，排期表已标注字数波动，供读者判断是否囤更。</p>
+              <div class="meta"><span class="chip">长灯文馆</span><span>11-01 记录</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 最新更新 -->
+      <section class="block" id="updates" aria-labelledby="upTitle">
+        <div class="sec-head">
+          <h2 id="upTitle">最新更新：11 月 1 日至 6 日排期</h2>
+          <span class="kicker">UPDATES</span>
+          <a class="more" href="/#channels">更多条目</a>
+        </div>
+        <div class="updates">
+          <div class="up-row"><time datetime="2026-11-06">11 月 6 日</time><span class="t">《长夜千灯》第 419 章<small>云栖阅读 · 沈砚舟 · 约 3100 字</small></span><span class="badge">已更新</span></div>
+          <div class="up-row"><time datetime="2026-11-05">11 月 5 日</time><span class="t">《北岭旧档》修订说明发布<small>星洲书阁 · 第 233 章年份改为德安三年</small></span><span class="badge">勘误</span></div>
+          <div class="up-row"><time datetime="2026-11-04">11 月 4 日</time><span class="t">《云隐棋事》双更补足第 156 章<small>长灯文馆 · 叶栖迟 · 上节 1400 字、下节 1400 字</small></span><span class="badge">修复</span></div>
+          <div class="up-row"><time datetime="2026-11-03">11 月 3 日</time><span class="t">《北岭旧档》第 233 章时间线错误<small>读者“雪线”在评论区附了原文对照</small></span><span class="badge">问题</span></div>
+          <div class="up-row"><time datetime="2026-11-02">11 月 2 日</time><span class="t">《九州烟火志》作者回应重复段落<small>云栖阅读 · 作者称刻意复调，未修订</small></span><span class="badge">回应</span></div>
+          <div class="up-row"><time datetime="2026-11-01">11 月 1 日</time><span class="t">《古砚灯语》第 300 至 305 章字数记录<small>长灯文馆 · 平均 2700 字，低于上月 3200 字</small></span><span class="badge">数据</span></div>
+          <div class="up-row"><time datetime="2026-10-31">10 月 31 日</time><span class="t">《蜀山行记》正篇恢复日更<small>星洲书阁 · 顾之野 · 卷外篇暂停</small></span><span class="badge">公告</span></div>
+        </div>
+      </section>
+
+      <!-- 题材频道 -->
+      <section class="block" id="channels" aria-labelledby="chTitle">
+        <div class="sec-head">
+          <h2 id="chTitle">题材频道：按你会搜的类别找连载</h2>
+          <span class="kicker">CHANNELS</span>
+        </div>
+        <div class="cat-index">
+          <a href="/#updates">长篇历史连载 <b>38</b></a>
+          <a href="/#updates">古装权谋长文 <b>26</b></a>
+          <a href="/#updates">江湖群像连载 <b>22</b></a>
+          <a href="/#featured">悬疑推理连载 <b>19</b></a>
+          <a href="/#featured">类现实职场长篇 <b>17</b></a>
+          <a href="/#featured">科幻纪元编年 <b>14</b></a>
+          <a href="/#guide">慢热型故事 <b>12</b></a>
+          <a href="/#guide">日更万字体量 <b>11</b></a>
+          <a href="/#guide">三十章后可入坑 <b>9</b></a>
+          <a href="/#deep">连载断更观察 <b>7</b></a>
+          <a href="/#comments">读者口碑榜单 <b>6</b></a>
+        </div>
+      </section>
+
+      <!-- 深度解析 -->
+      <section class="block deep" id="deep" aria-labelledby="dpTitle">
+        <div class="sec-head">
+          <h2 id="dpTitle">深度解析：连载字数下滑不等于质量下滑</h2>
+          <span class="kicker">ANALYSIS</span>
+        </div>
+        <p class="byline">基于 2026 年 10 月 8 日至 11 月 6 日、星洲书阁与云栖阅读两家平台的公开章节数据整理</p>
+
+        <p>把《古砚灯语》最近六章的字数画成折线，会看到一条从 3400 字滑到 2400 字的下降线。不少读者据此判断作者后劲不足，甚至开始囤更等待完结。这个判断只说明作者单章产能下降，不说明故事质量下降，两者之间没有稳定的对应关系。</p>
+
+        <h3>一、字数下降的三种成因可以分开核对</h3>
+        <p>第一种是平台推荐位变化。星洲书阁在 10 月 15 日调整了“日更万字”标签的权重，单章字数低于 2600 字的作品不再进入首页强推。作者为了保住位置，往往会把一章拆成两章发布，单章字数下降但总字数不变。《古砚灯语》10 月 20 日至 26 日的六章合计 20400 字，与此前一周的 20300 字基本持平，属于这种情况。</p>
+        <p>第二种是叙事阶段变化。长篇进入收束期后，战斗和场景描写减少，对话和信息披露增多，单章自然变短。《云隐棋事》第 150 章之后的平均字数比前半部少 600 字，但读者评分从 8.4 升到 8.6，说明紧凑化并未伤及阅读体验。</p>
+        <p>第三种才是真正的产能问题，表现是连续三周以上单章字数下降且更新间隔拉长，同时作者连续两周未在评论区回应。三件事同时出现才值得预警；只出现一件，把它当作质量信号并据此弃书，往往会错过作品后段最有价值的收束。</p>
+
+        <h3>二、可核对的做法：把判断拆成四项指标</h3>
+        <p>与其凭感觉讨论“这书还行不行”，不如逐项记录下面四项，用两周观察窗完成一次核对。读者“雪线”在 10 月 18 日到 11 月 1 日之间对《北岭旧档》做过一次完整记录，结论是：章节号仍在推进，字数微降，评论区回应频率从每天 2 条降到 3 天 1 条，勘误后第 233 章的读者评分回升 0.2。</p>
+        <table class="verify-table">
+          <caption>四项指标对照：以《北岭旧档》10 月 18 日至 11 月 1 日为例</caption>
+          <thead>
+            <tr><th>指标</th><th>观察值</th><th>判定</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>章节号推进</td><td>两周从 219 章到 232 章</td><td>正常</td></tr>
+            <tr><td>单章字数</td><td>3100 字降至 2900 字</td><td>轻微波动</td></tr>
+            <tr><td>作者回应频率</td><td>每天 2 条降至 3 天 1 条</td><td>需留意</td></tr>
+            <tr><td>勘误后评分</td><td>7.9 升至 8.1</td><td>回升</td></tr>
+          </tbody>
+        </table>
+        <p>这张表的价值在于它可被反驳。如果章节号停止推进，评价就该转为断更；如果字数下降而评分同时下降，评价就该转为质量预警。把判断挂在具体数字上，讨论才有落点。</p>
+
+        <blockquote>
+          连载是逐章交货的写作，读者买到的是一章，不是全书。一章的字数波动，最多说明作者这一周的工时分配，说明不了整部作品的价值。
+          <footer>——摘录自 10 月 24 日“长篇连载读者对谈”现场记录，发言者为读者 沈知白</footer>
+        </blockquote>
+
+        <h3>三、争议中的事实分层</h3>
+        <p>11 月 2 日《九州烟火志》第 302 章的重复段落争议中，可以分三层看。事实层：第 302 章有 217 字与作者 2023 年旧作《南市食单》第 41 节近似，读者“栗子街”贴出了逐句对照。回应层：作者当天在评论区承认引用旧段落，称是有意的复调写法，但未标明出处。转述层：部分转述者说作者“抄袭自己的书”，这个说法不准确，作者本人拥有两处文本的著作权，问题在未标注而非侵权。推测层：这一段的重复可能与连载赶稿有关，目前没有证据，不宜当作定论。</p>
+        <p>分层的意义在于，读者可以同时接受“作者没标出处”和“不算侵权”两个判断，不必在两者之间二选一。只保留情绪化的那一层，讨论就会失焦。</p>
+
+        <h3>四、给囤更读者的一个具体取舍</h3>
+        <p>《蜀山行记》10 月 30 日宣布卷外篇暂停、正篇恢复日更，这个安排对读者是利好。正篇从第 188 章推进到第 191 章，四天三章；卷外篇则停在第 14 篇。囤更的读者应当把卷外篇从“必读”降为“选读”，先追正篇，等卷外篇恢复再回头补，这样不会因为支线停更而误判整本书停更。</p>
+      </section>
+
+      <!-- 体验指南 -->
+      <section class="block" id="guide" aria-labelledby="gdTitle">
+        <div class="sec-head">
+          <h2 id="gdTitle">体验指南：四步把追更变成可管理的习惯</h2>
+          <span class="kicker">GUIDE</span>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <h3>建一张书单表</h3>
+            <p>按平台、书名、当前章节三列记录，只用一张表，不分散在收藏夹里。星洲书阁与云栖阅读的章节号差 1 到 2 章是常见现象，表里写清以哪站为准。</p>
+          </div>
+          <div class="step">
+            <h3>锁定每周核对日</h3>
+            <p>选周四或周六固定核对，对照排期表看章节号是否推进。超过 7 天没动，先看作者公告，再看评论区，两者都没有才记入断更。</p>
+          </div>
+          <div class="step">
+            <h3>给每本书标预算</h3>
+            <p>按章节字数估算阅读时长，3000 字约 12 分钟。追 186 部不现实，通常同时追 6 到 10 部，与通勤和睡前时段匹配即可。</p>
+          </div>
+          <div class="step">
+            <h3>评论只写能核对的点</h3>
+            <p>写章节号、原文措辞、出现时段，比写“这章很差”更有用。勘误和争议的讨论都从可核对的细节开始。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 对照面板 -->
+      <section class="block" id="compare" aria-labelledby="cpTitle">
+        <div class="sec-head">
+          <h2 id="cpTitle">两种追更方式对照：实时追更与完结补读</h2>
+          <span class="kicker">COMPARE</span>
+        </div>
+        <div class="compare">
+          <div class="left">
+            <span class="tagline">方式 A</span>
+            <h3>实时追更</h3>
+            <ul>
+              <li>优点：能参与评论区讨论，勘误与修订第一时间知道。</li>
+              <li>成本：时间被排期绑定，断更时容易产生落差。</li>
+              <li>适合：《长夜千灯》这类日更稳定、评论区活跃的作品。</li>
+              <li>风险：单章字数波动会被放大解读，判断容易失真。</li>
+            </ul>
+          </div>
+          <div class="right">
+            <span class="tagline">方式 B</span>
+            <h3>完结补读</h3>
+            <ul>
+              <li>优点：一次读完整卷，结构判断更准确。</li>
+              <li>成本：错过讨论热度，修订版的差异需另行比对。</li>
+              <li>适合：《古砚灯语》这类字数波动大、尚未收束的作品。</li>
+              <li>风险：完结时间不定，等待成本可能超过阅读成本。</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="block" id="faq" aria-labelledby="fqTitle">
+        <div class="sec-head">
+          <h2 id="fqTitle">常见问题：连载排期、断更和勘误怎么判断</h2>
+          <span class="kicker">FAQ</span>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>连载断更多久算真正停更？</summary>
+            <div class="ans">以平台公告为准。没有公告时，按作者历史更新间隔的 3 倍判断：日更作者连续 3 天无更新记为异常，周更作者连续 21 天无更新才记为异常。《蜀山行记》卷外篇停更 5 天，但正篇仍在推进，属于分卷安排而非停更。</div>
+          </details>
+          <details>
+            <summary>两个平台章节号不一致，以哪个为准？</summary>
+            <div class="ans">以首发平台为准。《北岭旧档》首发星洲书阁，第 233 章勘误也是在该站发布，云栖阅读的同步晚 1 天。追更表里应写明首发站，避免把延迟同步误判为少更。</div>
+          </details>
+          <details>
+            <summary>作者在评论区回应争议，算正式说明吗？</summary>
+            <div class="ans">算第一手回应，但不等同于正式公告。11 月 2 日《九州烟火志》的回应只出现在评论区，没有单独公告，读者转述时应当注明出处位置，避免把评论回应升级为官方声明。</div>
+          </details>
+          <details>
+            <summary>单章字数下降要不要弃书？</summary>
+            <div class="ans">先看两周总字数是否持平。《古砚灯语》10 月 20 日至 26 日合计 20400 字，与此前一周 20300 字基本一致，属于拆章而非减产。连续三周单章下降且更新间隔拉长，再考虑调整追更节奏。</div>
+          </details>
+          <details>
+            <summary>勘误之后旧版本章节还在旧链接里，怎么找修订版？</summary>
+            <div class="ans">以作者发布的修订说明为准。11 月 3 日《北岭旧档》修订版在原章节下替换发布，并附了年份对照；读者“雪线”同日贴出原文与新文的差异截图，可作为核对依据。</div>
+          </details>
+          <details>
+            <summary>追更表要记哪些字段最有用？</summary>
+            <div class="ans">五项足够：首发平台、当前章节、上次更新时间、字数、作者公告链接。字段超过五项后维护成本上升，多数读者坚持不过两周。</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 读者评论 -->
+      <section class="block" id="comments" aria-labelledby="cmTitle">
+        <div class="sec-head">
+          <h2 id="cmTitle">读者评论：387 条里挑出的七条</h2>
+          <span class="kicker">VOICES</span>
+        </div>
+        <div class="comments">
+          <article class="comment">
+            <header><span class="avatar">雪</span><span class="name">雪线</span><span>11-03</span><span class="ref">《北岭旧档》第 233 章</span></header>
+            <p>年份写成“德安五年”，前文第 41 章明确是德安三年。修订版改掉了，但云栖阅读那边还没换。建议先看星洲书阁。</p>
+          </article>
+          <article class="comment">
+            <header><span class="avatar">栗</span><span class="name">栗子街</span><span>11-02</span><span class="ref">《九州烟火志》第 302 章</span></header>
+            <p>217 字的近似段落，我做了逐句对照，第 7 句到第 12 句几乎一样。作者说是复调，但没标出处，这点我不太接受。</p>
+          </article>
+          <article class="comment">
+            <header><span class="avatar">阿</span><span class="name">阿砚</span><span>11-04</span><span class="ref">《云隐棋事》第 156 章</span></header>
+            <p>拆成上下两节后节奏好多了，之前那章 1400 字戛然而止确实难受。评分回到 8.6 有道理。</p>
+          </article>
+          <article class="comment">
+            <header><span class="avatar">慢</span><span class="name">慢读的人</span><span>11-01</span></header>
+            <p>同时追 12 部，现在砍到 5 部。不是书不好，是排期太多，每天刷更新列表比读书还累。</p>
+          </article>
+          <article class="comment critic">
+            <header><span class="avatar">木</span><span class="name">木鱼</span><span>10-31</span><span class="ref">《蜀山行记》卷外篇</span></header>
+            <p>卷外篇停更没意见，但公告放在作者动态里，正篇章节末尾没提。翻了三站才确认，安排本身可以更清楚。</p>
+          </article>
+          <article class="comment">
+            <header><span class="avatar">十</span><span class="name">十点半关灯</span><span>11-05</span><span class="ref">《长夜千灯》第 418 章</span></header>
+            <p>418 章 3200 字，比上个月平均少 400 字，但这一章对话多，读起来反而快。字数真说明不了什么。</p>
+          </article>
+          <article class="comment">
+            <header><span class="avatar">旧</span><span class="name">旧书摊</span><span>11-06</span></header>
+            <p>建议排期表加一列“修订记录”。勘误比更新更难追，尤其旧站已经换版的那种。</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 相关资讯 -->
+      <section class="block" id="news" aria-labelledby="nwTitle">
+        <div class="sec-head">
+          <h2 id="nwTitle">相关资讯：平台规则与连载动态</h2>
+          <span class="kicker">NEWS</span>
+        </div>
+        <div class="news-list">
+          <article class="news">
+            <img src="https://picsum.photos/seed/xingzhouguize/200/200" width="200" height="200" loading="lazy" alt="星洲书阁公告页面：标签权重调整说明">
+            <div>
+              <h3>星洲书阁“日更万字”标签权重调整</h3>
+              <p>10 月 15 日起，单章低于 2600 字的作品不再进入首页强推，拆章现象随之增加。</p>
+              <time datetime="2026-10-15">10 月 15 日</time>
+            </div>
+          </article>
+          <article class="news">
+            <img src="https://picsum.photos/seed/yunqiyuedu/200/200" width="200" height="200" loading="lazy" alt="云栖阅读后台截图风格：章节同步延迟提示">
+            <div>
+              <h3>云栖阅读章节同步延迟说明</h3>
+              <p>平台在 11 月 3 日说明，跨站同步最长延迟 36 小时，建议读者以首发站章节号为准。</p>
+              <time datetime="2026-11-03">11 月 3 日</time>
+            </div>
+          </article>
+          <article class="news">
+            <img src="https://picsum.photos/seed/changdengwenguan/200/200" width="200" height="200" loading="lazy" alt="长灯文馆页面：双更修复公告与作者署名">
+            <div>
+              <h3>长灯文馆上线“作者修订标记”</h3>
+              <p>11 月 4 日起，修订章节会显示修订时间和改动范围，叶栖迟是首个使用该标记的作者。</p>
+              <time datetime="2026-11-04">11 月 4 日</time>
+            </div>
+          </article>
+          <article class="news">
+            <img src="https://picsum.photos/seed/duzheduitan/200/200" width="200" height="200" loading="lazy" alt="读者对谈活动现场：几个人围坐翻书">
+            <div>
+              <h3>10 月 24 日“长篇连载读者对谈”记录发布</h3>
+              <p>现场讨论集中在断更判断与章节字数两个话题，记录稿已整理成 12 条问答。</p>
+              <time datetime="2026-10-24">10 月 24 日</time>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 相关推荐 -->
+      <section class="block" id="recommend" aria-labelledby="rcTitle">
+        <div class="sec-head">
+          <h2 id="rcTitle">相关推荐：这些词也能直接搜</h2>
+          <span class="kicker">TAGS</span>
+        </div>
+        <div class="rec-tags">
+          <a href="/#updates">长篇连载断更判断</a>
+          <a href="/#deep">章节字数下滑分析</a>
+          <a href="/#guide">追更书单管理表</a>
+          <a href="/#featured">古装权谋长文推荐</a>
+          <a href="/#channels">悬疑推理连载频道</a>
+          <a href="/#news">平台章节同步延迟</a>
+          <a href="/#faq">作者评论区回应怎么读</a>
+          <a href="/#comments">连载修订记录追踪</a>
+          <a href="/#featured">慢热型故事入坑点</a>
+          <a href="/#deep">分流章节与拆章写作</a>
+        </div>
+      </section>
+
+      <!-- 榜单 -->
+      <section class="block" id="rank" aria-labelledby="rkTitle">
+        <div class="sec-head">
+          <h2 id="rkTitle">口碑榜单：11 月首周读者评分前八</h2>
+          <span class="kicker">RANKING</span>
+        </div>
+        <div class="rank">
+          <ol>
+            <li><span>《长夜千灯》· 沈砚舟</span><span class="num">8.9</span></li>
+            <li><span>《云隐棋事》· 叶栖迟</span><span class="num">8.6</span></li>
+            <li><span>《蜀山行记》· 顾之野</span><span class="num">8.5</span></li>
+            <li><span>《古砚灯语》· 陆听松</span><span class="num">8.3</span></li>
+            <li><span>《北岭旧档》· 周渡</span><span class="num">8.1</span></li>
+            <li><span>《九州烟火志》· 陈敬川</span><span class="num">7.8</span></li>
+            <li><span>《南塘纪事》· 许观澜</span><span class="num">7.6</span></li>
+            <li><span>《霜河夜话》· 林叙白</span><span class="num">7.4</span></li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- 时间线 -->
+      <section class="block" id="timeline" aria-labelledby="tlTitle">
+        <div class="sec-head">
+          <h2 id="tlTitle">四周时间线：从拆章到勘误</h2>
+          <span class="kicker">TIMELINE</span>
+        </div>
+        <div class="timeline">
+          <div class="tl">
+            <time datetime="2026-10-15">10 月 15 日</time>
+            <h3>星洲书阁调整标签权重</h3>
+            <p>低于 2600 字的单章退出强推，拆章开始增多，追更表新增字数列。</p>
+          </div>
+          <div class="tl">
+            <time datetime="2026-10-24">10 月 24 日</time>
+            <h3>读者对谈记录发布</h3>
+            <p>12 条问答里，7 条关于断更判断，3 条关于字数，2 条关于勘误。</p>
+          </div>
+          <div class="tl">
+            <time datetime="2026-10-30">10 月 30 日</time>
+            <h3>《蜀山行记》分卷调整</h3>
+            <p>卷外篇暂停，正篇恢复日更，四天推进三章。</p>
+          </div>
+          <div class="tl">
+            <time datetime="2026-11-02">11 月 2 日</time>
+            <h3>第 302 章重复段落争议</h3>
+            <p>作者评论区回应称刻意复调，未标出处，读者贴出逐句对照。</p>
+          </div>
+          <div class="tl">
+            <time datetime="2026-11-04">11 月 4 日</time>
+            <h3>长灯文馆上线修订标记</h3>
+            <p>修订章节显示时间与范围，叶栖迟首个使用。</p>
+          </div>
+          <div class="tl">
+            <time datetime="2026-11-06">11 月 6 日</time>
+            <h3>三平台统一核对</h3>
+            <p>《北岭旧档》两站章节号相差 2 章，确认为同步延迟。</p>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /content -->
+
+    <aside class="side" aria-label="侧栏导航与快捷入口">
+      <nav class="side-box side-nav" id="sideNav" aria-label="页内栏目快捷导航">
+        <h3>页内导航</h3>
+        <a href="#overview">连载概览</a>
+        <a href="#featured">精选追更</a>
+        <a href="#updates">最新更新</a>
+        <a href="#channels">题材频道</a>
+        <a href="#deep">深度解析</a>
+        <a href="#guide">体验指南</a>
+        <a href="#compare">方式对照</a>
+        <a href="#faq">常见问题</a>
+        <a href="#comments">读者评论</a>
+        <a href="#news">相关资讯</a>
+        <a href="#recommend">相关推荐</a>
+        <a href="#rank">口碑榜单</a>
+        <a href="#timeline">四周时间线</a>
+      </nav>
+      <div class="side-box">
+        <h3>本周断更预警</h3>
+        <ul>
+          <li><a href="/#updates">《南塘纪事》</a><small>已 9 天无更新 · 作者未公告</small></li>
+          <li><a href="/#updates">《霜河夜话》</a><small>已 7 天无更新 · 评论区称在改稿</small></li>
+          <li><a href="/#updates">《古砚灯语》</a><small>更新正常 · 字数下滑记录中</small></li>
+        </ul>
+      </div>
+      <div class="side-box">
+        <h3>快速核对</h3>
+        <ul>
+          <li><a href="/#faq">断更多久算停更</a></li>
+          <li><a href="/#faq">两站章节号不一致怎么办</a></li>
+          <li><a href="/#deep">字数下滑是否等于质量下滑</a></li>
+        </ul>
+        <p class="side-note">排期数据来自平台公开章节页，11 月 6 日核对；示例条目与评分仅作方法演示。</p>
+      </div>
+    </aside>
+
+  </div><!-- /layout -->
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <span class="brand-text">天天日日夜夜久久<small>长篇连载阅读指南</small></span>
+        <p>核对章节号、记录字数与断更天数，让每一次追更都落在可查的时间点上。</p>
+        <p class="sample-note">页面中的作品名、作者名、评分与平台动态均为示例数据，用于演示核对方法。</p>
+      </div>
+      <div class="foot-col">
+        <h3>追更工具</h3>
+        <ul>
+          <li><a href="/#updates">更新排期表</a></li>
+          <li><a href="/#guide">追更书单管理</a></li>
+          <li><a href="/#faq">断更判断规则</a></li>
+          <li><a href="/#news">平台同步延迟</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h3>栏目入口</h3>
+        <ul>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#featured">精选追更</a></li>
+          <li><a href="/#rank">口碑榜单</a></li>
+          <li><a href="/#timeline">四周时间线</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h3>读者互动</h3>
+        <ul>
+          <li><a href="/#comments">读者评论</a></li>
+          <li><a href="/#channels">题材频道</a></li>
+          <li><a href="/#recommend">相关推荐词</a></li>
+          <li><a href="/#overview">连载概览</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 天天日日夜夜久久 · 示例内容，非商业运营站点</p>
+      <p>页面更新时间：2026-11-06 · 对应正文可核对项：《长夜千灯》第 419 章、《北岭旧档》修订说明、三平台统一核对</p>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="回到页面顶部">↑</button>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "天天日日夜夜久久",
+  "description": "面向长篇连载读者的追更与阅读指引站，梳理连载平台排期、章节更新节奏、阅读进度管理与读者评论方法。",
+  "inLanguage": "zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "连载断更多久算真正停更？",
+      "acceptedAnswer": {"@type": "Answer", "text": "以平台公告为准。没有公告时，按作者历史更新间隔的 3 倍判断：日更作者连续 3 天无更新记为异常，周更作者连续 21 天无更新才记为异常。"}
+    },
+    {
+      "@type": "Question",
+      "name": "两个平台章节号不一致，以哪个为准？",
+      "acceptedAnswer": {"@type": "Answer", "text": "以首发平台为准。跨站同步存在延迟，追更表里应写明首发站，避免把延迟同步误判为少更。"}
+    },
+    {
+      "@type": "Question",
+      "name": "作者在评论区回应争议，算正式说明吗？",
+      "acceptedAnswer": {"@type": "Answer", "text": "算第一手回应，但不等同于正式公告。读者转述时应当注明出处位置，避免把评论回应升级为官方声明。"}
+    },
+    {
+      "@type": "Question",
+      "name": "单章字数下降要不要弃书？",
+      "acceptedAnswer": {"@type": "Answer", "text": "先看两周总字数是否持平。若属于拆章而非减产，不必弃书；连续三周单章下降且更新间隔拉长，再考虑调整追更节奏。"}
+    },
+    {
+      "@type": "Question",
+      "name": "勘误之后旧版本章节还在旧链接里，怎么找修订版？",
+      "acceptedAnswer": {"@type": "Answer", "text": "以作者发布的修订说明为准。修订版通常在原章节下替换发布，读者可借助对照截图核对差异。"}
+    }
+  ]
+}
+</script>
+
+<script>
+(function(){
+  "use strict";
+
+  /* 移动端菜单 */
+  var menuBtn = document.getElementById('menuBtn');
+  var nav = document.getElementById('mainNav');
+  if(menuBtn && nav){
+    menuBtn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.innerWidth <= 760){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  /* 本地查找 */
+  var form = document.getElementById('searchForm');
+  var input = document.getElementById('searchInput');
+  var result = document.getElementById('searchResult');
+
+  var indexData = [];
+  document.querySelectorAll('main .block').forEach(function(block){
+    var titleEl = block.querySelector('h2, h3');
+    var blockTitle = titleEl ? titleEl.textContent.trim() : (block.id || '');
+    block.querySelectorAll('h3, summary, a, .rank li span, .comment p, .up-row .t').forEach(function(el){
+      var text = el.textContent.replace(/\s+/g,' ').trim();
+      if(text.length < 2) return;
+      indexData.push({ text: text, section: blockTitle, id: block.id });
+    });
+  });
+
+  /* 去重 */
+  var seen = {};
+  indexData = indexData.filter(function(item){
+    var key = item.id + '|' + item.text;
+    if(seen[key]) return false;
+    seen[key] = true;
+    return true;
+  });
+
+  function renderResult(list, keyword){
+    result.innerHTML = '';
+    if(!list.length){
+      var empty = document.createElement('div');
+      empty.className = 'empty';
+      empty.textContent = '没有找到与“' + keyword + '”相关的条目，换个书名、作者或规则词再试。';
+      result.appendChild(empty);
+    } else {
+      var ul = document.createElement('ul');
+      list.slice(0,8).forEach(function(item){
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        a.href = '/#' + item.id;
+        a.textContent = item.text.length > 46 ? item.text.slice(0,46) + '…' : item.text;
+        var small = document.createElement('small');
+        small.style.display = 'block';
+        small.style.color = '#6c7789';
+        small.textContent = '所属栏目：' + item.section;
+        li.appendChild(a);
+        li.appendChild(small);
+        ul.appendChild(li);
+      });
+      result.appendChild(ul);
+    }
+    result.classList.add('show');
+  }
+
+  function doSearch(keyword){
+    keyword = keyword.trim();
+    if(!keyword){
+      result.classList.remove('show');
+      result.innerHTML = '';
+      return;
+    }
+    var kw = keyword.toLowerCase();
+    var list = indexData.filter(function(item){
+      return item.text.toLowerCase().indexOf(kw) !== -1;
+    });
+    renderResult(list, keyword);
+  }
+
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      doSearch(input.value);
+    });
+  }
+  if(input){
+    var timer = null;
+    input.addEventListener('input', function(){
+      clearTimeout(timer);
+      timer = setTimeout(function(){ doSearch(input.value); }, 220);
+    });
+    input.addEventListener('keydown', function(e){
+      if(e.key === 'Escape'){ result.classList.remove('show'); }
+    });
+  }
+  document.addEventListener('click', function(e){
+    if(result && !result.contains(e.target) && e.target !== input && !form.contains(e.target)){
+      result.classList.remove('show');
+    }
+  });
+  if(result){
+    result.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){ result.classList.remove('show'); }
+    });
+  }
+
+  /* 回到顶部 */
+  var toTop = document.getElementById('toTop');
+  function onScroll(){
+    if(window.scrollY > 480){ toTop.classList.add('show'); }
+    else{ toTop.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  toTop.addEventListener('click', function(){
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  /* 侧栏滚动高亮 */
+  var sideLinks = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var sections = sideLinks.map(function(a){
+    return document.querySelector(a.getAttribute('href'));
+  }).filter(Boolean);
+
+  function highlight(){
+    var pos = window.scrollY + 160;
+    var current = sections[0];
+    sections.forEach(function(sec){
+      if(sec.offsetTop <= pos){ current = sec; }
+    });
+    sideLinks.forEach(function(a){
+      a.classList.toggle('active', ('#' + current.id) === a.getAttribute('href'));
+    });
+  }
+  window.addEventListener('scroll', highlight, { passive: true });
+  window.addEventListener('resize', highlight);
+  highlight();
+})();
+</script>
+</body>
+              </html>
